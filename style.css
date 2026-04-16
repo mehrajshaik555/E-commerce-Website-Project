@@ -1,0 +1,269 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+/* Light Mode */
+body.light {
+    background: #f5f5f5;
+    color: black;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+    color: rgb(234, 234, 238);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: black;
+    color: rgba(106, 87, 184, 0.726);
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+}
+
+/* Nav Links */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(43, 4, 106);
+    font-weight: bold;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: rgb(162, 58, 105);
+}
+
+/* Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Box */
+.nav-right input {
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+/* Theme Button */
+.nav-right button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Light Navbar */
+body.light .navbar {
+    background: #ffffff;
+    color: black;
+}
+
+body.light nav a {
+    color: black;
+}
+
+/* ================= BANNER ================= */
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* ================= PRODUCTS ================= */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Dark Mode Card */
+body.dark .product-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Description */
+.desc {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Rating */
+.rating {
+    color: orange;
+}
+
+/* Price */
+.price {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ================= BUTTON ================= */
+button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: orange;
+}
+
+/* ================= CART ================= */
+.cart {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Light Cart */
+body.light .cart {
+    background: white;
+    color: black;
+}
+
+/* Dark Cart */
+body.dark .cart {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Cart List */
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+/* Cart Item */
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.05);
+}
+
+/* Dark Cart Item */
+body.dark #cart-items li {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Remove Button */
+#cart-items button {
+    width: auto;
+    padding: 5px 10px;
+    background: red;
+}
+
+#cart-items button:hover {
+    background: darkred;
+}
+
+/* Total */
+#total {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Dark Contact */
+body.dark .contact {
+    background: #1e1e1e;
+}
+
+/* Form Inputs */
+.contact input,
+.contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin: 10px 0;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+}
